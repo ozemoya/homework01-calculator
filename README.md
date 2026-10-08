@@ -20,5 +20,5 @@ The UI has descriptive semantics labels for buttons and error text. I did not pe
 
 ## Attribution
 
-OpenAI Codex assisted with code and documentation. Gemini and ChatGPT were used for the two assignment review prompts; their suggestions were checked against the engine tests and release UI, as described in the separate implementation document. Assignment reference: [Homework 01 Calculator Studio](https://codd.cs.gsu.edu/~lhenry23/mad/hw/hw01/index.html).
+An AI coding assistant helped with code and documentation. Gemini and ChatGPT were used for the two assignment review prompts; their suggestions were checked against the engine tests and release UI, as described in the separate implementation document. Assignment reference: [Homework 01 Calculator Studio](https://codd.cs.gsu.edu/~lhenry23/mad/hw/hw01/index.html).
 
