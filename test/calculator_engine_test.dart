@@ -24,11 +24,21 @@ void main() {
     final calculator = CalculatorEngine();
     enter(calculator, '8 ÷ 0 =');
     expect(calculator.errorMessage, contains('divide by zero'));
+    enter(calculator, 'AC 0 ÷ 0 =');
+    expect(calculator.errorMessage, contains('divide by zero'));
     enter(calculator, 'AC 2 + =');
     expect(calculator.errorMessage, contains('second number'));
+    enter(calculator, 'AC =');
+    expect(calculator.errorMessage, contains('Choose an operation'));
     enter(calculator, 'AC 3 + 4 =');
     expect(calculator.display, '7');
     expect(calculator.errorMessage, isNull);
+  });
+
+  test('fractional result without decimal input', () {
+    final calculator = CalculatorEngine();
+    enter(calculator, '7 ÷ 2 =');
+    expect(calculator.display, '3.5');
   });
 
   test('repeated operator changes selection and result starts a new input', () {

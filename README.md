@@ -14,10 +14,11 @@ From this project directory, run `flutter pub get`, `flutter run`, `flutter anal
 
 ## Checks
 
-`flutter analyze` reported no issues, and `flutter test` passed three engine test groups covering the four operators and negative result, division by zero/incomplete input and recovery, and repeated-operator/result transitions. I installed the **release APK** on a Pixel 7 Pro Android 17 emulator. Manual UI checks showed `8 + 7 = 15`, then `× 2 = 30`; the theme button changed its label from “Switch to dark theme” to “Switch to light theme”; and `AC, 8 ÷ 0 =` showed “Cannot divide by zero. Tap AC or enter a new number.” The last state is pictured in `evidence/dark_divide_by_zero.png`.
+`flutter analyze` reported no issues, and `flutter test` passed four engine test groups covering the four operators and negative result, division by zero/incomplete input and recovery, a fractional output, and repeated-operator/result transitions. I installed the **release APK** on a Pixel 7 Pro Android 17 emulator. Manual UI checks showed `8 + 7 = 15`, then `× 2 = 30`; the theme button changed its label from “Switch to dark theme” to “Switch to light theme”; and `AC, 8 ÷ 0 =` showed “Cannot divide by zero. Tap AC or enter a new number.” The last state is pictured in `evidence/dark_divide_by_zero.png`.
 
 The UI has descriptive semantics labels for buttons and error text. I did not perform a live TalkBack or large-font device test, so those remain validation work. Very long input is capped at 12 digits; the cap currently gives no explicit message.
 
 ## Attribution
 
 OpenAI Codex assisted with code and documentation. Gemini and ChatGPT were used for the two assignment review prompts; their suggestions were checked against the engine tests and release UI, as described in the separate implementation document. Assignment reference: [Homework 01 Calculator Studio](https://codd.cs.gsu.edu/~lhenry23/mad/hw/hw01/index.html).
+
